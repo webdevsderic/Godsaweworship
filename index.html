@@ -286,6 +286,50 @@ line-height:2;
 font-size:clamp(16px, 3vw, 18px);
 }
 
+.background-section{
+background:#f0f0f0;
+padding:60px 8%;
+border-radius:15px;
+margin:40px 0;
+}
+
+.background-section h3{
+color:#062a78;
+margin-bottom:15px;
+}
+
+.background-section p{
+color:#555;
+font-size:clamp(14px, 3vw, 16px);
+line-height:1.9;
+}
+
+.campus-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.campus-item{
+background:white;
+padding:25px;
+border-radius:12px;
+border-left:5px solid #f8b400;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.campus-item h4{
+color:#062a78;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.campus-item p{
+color:#666;
+font-size:14px;
+}
+
 .contact-container{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -365,6 +409,34 @@ padding:40px;
 
 footer p{
 font-size:clamp(14px, 2vw, 16px);
+}
+
+.social-links{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.social-links a{
+display:inline-block;
+width:50px;
+height:50px;
+background:#062a78;
+color:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+transition:0.3s;
+font-size:20px;
+}
+
+.social-links a:hover{
+background:#f8b400;
+color:#062a78;
+transform:translateY(-5px);
 }
 
 .whatsapp{
@@ -491,6 +563,8 @@ animation:none;
 <ul id="menu">
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
+<li><a href="#background">Background</a></li>
+<li><a href="#campuses">Campuses</a></li>
 <li><a href="#ministries">Ministries</a></li>
 <li><a href="#live">Live Stream</a></li>
 <li><a href="#announcement">Announcements</a></li>
@@ -560,6 +634,58 @@ Prayerfulness, integrity, excellence, righteousness, courage and accountability.
 
 </section>
 
+<section id="background" class="background-section">
+
+<h2 class="title">Our Background & History</h2>
+
+<p>
+God's Awe Worship Center is a bible-based ministry, laid on the foundation of prayer and the rhema word of God. This ministry is called to share the Gospel of Jesus, disciple nation, raise a generation who shall worship the father in spirit and truth. Gods awe worship center ministries was begun as a prayer fellowship in January 2020 by Rev. Jeremy and Tabitha Menda. By God's grace on September 27, 2020, it was established as a ministry based In Abilene Texas, United states of America. Since its inception, the ministry has continued to attract and minister to large numbers of people, locally and globally, both young and old in all walks of life.
+</p>
+
+<p style="margin-top:20px;">
+The name God's Awe Worship Center Ministries was prayerfully derived from Hebrews 12:28 "Therefore, let us be grateful for receiving a kingdom that cannot be shaken, and thus let us offer bo God acceptable worship, with reverence and Awe for our God is a consuming fire." The name reflects the main ministry and vision of the church.
+</p>
+
+</section>
+
+<section id="campuses">
+
+<h2 class="title">Our Campuses</h2>
+
+<p class="subtitle">
+By God's grace we have experienced tremendous growth which has resulted with multiple campuses around the globe.
+</p>
+
+<div class="campus-list">
+
+<div class="campus-item">
+<h4><i class="fas fa-map-marker-alt" aria-hidden="true"></i> God's Awe Kariene</h4>
+<p>Kariene, Kenya</p>
+</div>
+
+<div class="campus-item">
+<h4><i class="fas fa-map-marker-alt" aria-hidden="true"></i> God's Awe Maua</h4>
+<p>Maua, Kenya</p>
+</div>
+
+<div class="campus-item">
+<h4><i class="fas fa-map-marker-alt" aria-hidden="true"></i> God's Awe Athi</h4>
+<p>Athi, Kenya</p>
+</div>
+
+<div class="campus-item">
+<h4><i class="fas fa-map-marker-alt" aria-hidden="true"></i> God's Awe Dallas</h4>
+<p>Dallas, Texas U.S.A.</p>
+</div>
+
+</div>
+
+<p style="text-align:center; margin-top:40px; color:#555; font-size:clamp(14px, 3vw, 16px);">
+We are so blessed to have all these campuses and we are excited for the new ones the Lord will bless us with.
+</p>
+
+</section>
+
 <section id="ministries">
 
 <h2 class="title">Our Ministries</h2>
@@ -607,11 +733,13 @@ Connect with us online through our social media platforms.
 <div class="card">
 <i class="fab fa-facebook" aria-hidden="true"></i>
 <h3>Facebook Live</h3>
+<p><a href="https://www.facebook.com/jeremy.mwambia.9" target="_blank" rel="noopener noreferrer" style="color:#062a78; font-weight:bold; text-decoration:none;">Visit Facebook</a></p>
 </div>
 
 <div class="card">
 <i class="fab fa-youtube" aria-hidden="true"></i>
 <h3>YouTube</h3>
+<p><a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" style="color:#062a78; font-weight:bold; text-decoration:none;">Visit YouTube</a></p>
 </div>
 
 <div class="card">
@@ -692,6 +820,15 @@ Community Outreach Program This Month
 <p>
 Welcome where everybody is somebody.
 </p>
+
+<div class="social-links">
+<a href="https://www.facebook.com/jeremy.mwambia.9" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+<i class="fab fa-facebook-f" aria-hidden="true"></i>
+</a>
+<a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel">
+<i class="fab fa-youtube" aria-hidden="true"></i>
+</a>
+</div>
 
 </div>
 
