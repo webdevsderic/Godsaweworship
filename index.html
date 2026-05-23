@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="God's Awe Worship Ministries - A Bible-based ministry founded on prayer, worship, and the word of God. Join our community for Sunday worship, prayer services, and [...]
+<meta name="description" content="God's Awe Worship Ministries - A Bible-based ministry founded on prayer, worship, and the word of God. Join our community for Sunday worship, prayer services, and spiritual growth.">
 <meta name="keywords" content="worship, ministry, church, prayer, spiritual growth, faith">
 <meta name="author" content="God's Awe Worship Ministries">
 <meta name="theme-color" content="#062a78">
@@ -30,7 +30,7 @@
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
 <!-- Font Awesome CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR3[...]
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR3bVAwIhTjt7vKQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23f8b400'>✦</text></svg>">
@@ -290,6 +290,82 @@ margin-bottom:15px;
 .card p{
 color:#666;
 line-height:1.8;
+}
+
+/* Team Section Styles */
+.team-section{
+background:#f9f9f9;
+padding:60px 8%;
+}
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+margin-top:50px;
+}
+
+.team-member{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.team-member.show{
+opacity:1;
+transform:translateY(0);
+animation:slideUp 0.6s ease-out;
+}
+
+.team-member:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.team-image{
+width:100%;
+height:350px;
+background:linear-gradient(135deg,#062a78,#0f4fd1);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#ccc;
+font-size:60px;
+overflow:hidden;
+}
+
+.team-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.team-info{
+padding:30px;
+text-align:center;
+}
+
+.team-info h4{
+color:#062a78;
+font-size:22px;
+margin-bottom:10px;
+}
+
+.team-info p{
+color:#666;
+font-size:14px;
+line-height:1.8;
+}
+
+.team-title{
+color:#f8b400;
+font-weight:bold;
+font-size:13px;
+margin-bottom:8px;
 }
 
 .announcement{
@@ -625,6 +701,55 @@ outline:3px solid white;
 outline-offset:3px;
 }
 
+/* Quick Menu for Mobile */
+.quick-menu{
+position:fixed;
+bottom:100px;
+right:20px;
+background:white;
+border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+z-index:998;
+opacity:0;
+transform:scale(0);
+transform-origin:bottom right;
+transition:0.3s ease;
+max-width:200px;
+}
+
+.quick-menu.active{
+opacity:1;
+transform:scale(1);
+}
+
+.quick-menu a{
+display:block;
+padding:12px 20px;
+color:#062a78;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+border-bottom:1px solid #eee;
+transition:0.3s;
+}
+
+.quick-menu a:last-child{
+border-bottom:none;
+}
+
+.quick-menu a:hover{
+background:#f8b400;
+color:white;
+}
+
+.menu-toggle{
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:999;
+display:none;
+}
+
 @keyframes pulse{
 0%{transform:scale(1);}
 50%{transform:scale(1.1);}
@@ -706,6 +831,28 @@ padding:60px 5%;
 grid-template-columns:1fr;
 }
 
+.team-grid{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.team-image{
+height:250px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.quick-menu{
+bottom:auto;
+top:110px;
+right:20px;
+left:20px;
+max-width:none;
+border-radius:8px;
+}
+
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -723,12 +870,20 @@ animation:none;
 animation:none;
 }
 
+.team-member.show{
+animation:none;
+}
+
 .whatsapp{
 animation:none;
 }
 
 .hero-logo img{
 animation:none;
+}
+
+.quick-menu.active{
+transform:scale(1);
 }
 }
 
@@ -748,6 +903,7 @@ animation:none;
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#background">Background</a></li>
+<li><a href="#team">Leadership</a></li>
 <li><a href="#campuses">Campuses</a></li>
 <li><a href="#ministries">Ministries</a></li>
 <li><a href="#blog">Blog</a></li>
@@ -760,6 +916,15 @@ animation:none;
 </button>
 
 </nav>
+
+<!-- Quick Menu for Mobile -->
+<div class="quick-menu" id="quickMenu">
+<a href="#home">🏠 Home</a>
+<a href="#about">ℹ️ About</a>
+<a href="#team">👥 Leadership</a>
+<a href="#contact">📞 Contact</a>
+<a href="#live">📺 Live Stream</a>
+</div>
 
 <section class="hero" id="home">
 
@@ -827,12 +992,60 @@ Prayerfulness, integrity, excellence, righteousness, courage and accountability.
 <h2 class="title">Our Background & History</h2>
 
 <p>
-God's Awe Worship Center is a bible-based ministry, laid on the foundation of prayer and the rhema word of God. This ministry is called to share the Gospel of Jesus, disciple nation, raise a gene[...]
+God's Awe Worship Center is a bible-based ministry, laid on the foundation of prayer and the rhema word of God. This ministry is called to share the Gospel of Jesus, disciple nation, raise a generation that worships God in spirit and truth.
 </p>
 
 <p style="margin-top:20px;">
-The name God's Awe Worship Center Ministries was prayerfully derived from Hebrews 12:28 "Therefore, let us be grateful for receiving a kingdom that cannot be shaken, and thus let us offer bo God [...]
+The name God's Awe Worship Center Ministries was prayerfully derived from Hebrews 12:28 "Therefore, let us be grateful for receiving a kingdom that cannot be shaken, and thus let us offer to God acceptable worship, with reverence and awe."
 </p>
+
+</section>
+
+<!-- Team/Leadership Section -->
+<section id="team" class="team-section">
+
+<h2 class="title">Our Leadership</h2>
+
+<p class="subtitle">
+Meet the dedicated leaders serving God's Awe Worship Ministries with passion and purpose.
+</p>
+
+<div class="team-grid">
+
+<div class="team-member">
+<div class="team-image">
+<img src="https://raw.githubusercontent.com/webdevsderic/Godsaweworship/main/assets/founders.jpg" alt="Rev Jeremy and Tabitha Mwenda - Founders" loading="lazy">
+</div>
+<div class="team-info">
+<div class="team-title">Founders & Senior Pastors</div>
+<h4>Rev Jeremy & Tabitha Mwenda</h4>
+<p>Leading the ministry with vision, passion, and spiritual authority. Committed to raising a generation that worships God in spirit and truth.</p>
+</div>
+</div>
+
+<div class="team-member">
+<div class="team-image">
+<img src="https://raw.githubusercontent.com/webdevsderic/Godsaweworship/main/assets/team1.jpg" alt="Ministry Team 1" loading="lazy">
+</div>
+<div class="team-info">
+<div class="team-title">Ministry Team</div>
+<h4>Team Leaders & Pastors</h4>
+<p>Dedicated servants working together to strengthen the ministry, provide spiritual guidance, and serve our growing community with love and excellence.</p>
+</div>
+</div>
+
+<div class="team-member">
+<div class="team-image">
+<img src="https://raw.githubusercontent.com/webdevsderic/Godsaweworship/main/assets/team2.jpg" alt="Ministry Team 2" loading="lazy">
+</div>
+<div class="team-info">
+<div class="team-title">Support Team & Volunteers</div>
+<h4>Serving Together</h4>
+<p>Our passionate volunteers and support staff work tirelessly to make every service meaningful and create an inclusive spiritual community for all.</p>
+</div>
+</div>
+
+</div>
 
 </section>
 
@@ -977,17 +1190,19 @@ Connect with us online through our social media platforms.
 <div class="card">
 <i class="fab fa-youtube" aria-hidden="true"></i>
 <h3>YouTube</h3>
-<p><a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" style="color:#062a78; font-weight:bold; text-decoration:none;">Visit YouTube</a><[...]
+<p><a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" style="color:#062a78; font-weight:bold; text-decoration:none;">Visit YouTube</a></p>
 </div>
 
 <div class="card">
 <i class="fab fa-instagram" aria-hidden="true"></i>
 <h3>Instagram</h3>
+<p><a href="#contact" style="color:#062a78; font-weight:bold; text-decoration:none;">Get Connected</a></p>
 </div>
 
 <div class="card">
 <i class="fab fa-tiktok" aria-hidden="true"></i>
 <h3>TikTok</h3>
+<p><a href="#contact" style="color:#062a78; font-weight:bold; text-decoration:none;">Get Connected</a></p>
 </div>
 
 </div>
@@ -1047,3 +1262,150 @@ Community Outreach Program This Month
 <div class="card show">
 
 <h3>Church Contact Information</h3>
+
+<p style="margin-bottom:20px; color:#666;">
+We would love to hear from you. Reach out to us through any of the following channels.
+</p>
+
+<p style="margin-bottom:15px; color:#555;">
+<strong style="color:#062a78;">Phone:</strong> <a href="tel:+254700000000" style="color:#f8b400; text-decoration:none; font-weight:bold;">+254 700 000 000</a>
+</p>
+
+<p style="margin-bottom:15px; color:#555;">
+<strong style="color:#062a78;">Email:</strong> <a href="mailto:info@godsaweworshipministries.com" style="color:#f8b400; text-decoration:none; font-weight:bold;">info@godsaweworshipministries.com</a>
+</p>
+
+<p style="margin-bottom:15px; color:#555;">
+<strong style="color:#062a78;">WhatsApp:</strong> <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" style="color:#f8b400; text-decoration:none; font-weight:bold;">Message Us</a>
+</p>
+
+<p style="color:#555; line-height:1.8;">
+<strong style="color:#062a78;">Service Times:</strong><br>
+Sunday: 10:00 AM - 1:00 PM<br>
+Wednesday: 7:00 PM - 9:00 PM<br>
+Friday: 6:00 PM - 8:00 PM
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-content">
+
+<div class="footer-section">
+<h3>About Us</h3>
+<p>
+God's Awe Worship Ministries is a Bible-based ministry dedicated to spreading the Gospel of Jesus Christ and raising a generation that worships God in spirit and truth.
+</p>
+</div>
+
+<div class="footer-section">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#team">Leadership</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#live">Live Stream</a></li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h3>Our Ministries</h3>
+<ul>
+<li><a href="#ministries">Prayer Warriors</a></li>
+<li><a href="#ministries">Youth Ministry</a></li>
+<li><a href="#ministries">Family Foundation</a></li>
+<li><a href="#ministries">Outreach Ministry</a></li>
+</ul>
+</div>
+
+<div class="footer-section">
+<h3>Follow Us</h3>
+<div class="social-links">
+<a href="https://www.facebook.com/jeremy.mwambia.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+<i class="fab fa-facebook-f" aria-hidden="true"></i>
+</a>
+<a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<i class="fab fa-youtube" aria-hidden="true"></i>
+</a>
+<a href="#" aria-label="Instagram">
+<i class="fab fa-instagram" aria-hidden="true"></i>
+</a>
+<a href="#" aria-label="TikTok">
+<i class="fab fa-tiktok" aria-hidden="true"></i>
+</a>
+</div>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>&copy; 2026 God's Awe Worship Ministries. All rights reserved. | <a href="#" style="color:#f8b400; text-decoration:none;">Privacy Policy</a></p>
+</div>
+
+</footer>
+
+<!-- WhatsApp Button with Logo -->
+<a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="Contact us on WhatsApp" title="Chat with us on WhatsApp">
+<i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<!-- Quick Menu Toggle Button (Mobile Only) -->
+<button class="menu-toggle" id="menuToggleBtn" onclick="toggleQuickMenu()" aria-label="Toggle quick menu" title="Quick Navigation">
+<i class="fas fa-ellipsis-v" style="color:#062a78; font-size:24px; background:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; border:none; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2);"></i>
+</button>
+
+<script>
+
+function toggleMenu(){
+const menu = document.getElementById("menu");
+menu.classList.toggle("active");
+}
+
+function toggleQuickMenu(){
+const quickMenu = document.getElementById("quickMenu");
+quickMenu.classList.toggle("active");
+}
+
+// Close menu when link is clicked
+document.querySelectorAll("#menu a").forEach(link => {
+link.addEventListener("click", () => {
+document.getElementById("menu").classList.remove("active");
+});
+});
+
+// Close quick menu when link is clicked
+document.querySelectorAll("#quickMenu a").forEach(link => {
+link.addEventListener("click", () => {
+document.getElementById("quickMenu").classList.remove("active");
+});
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+threshold: 0.1,
+rootMargin: "0px 0px -100px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+}, observerOptions);
+
+document.querySelectorAll(".card, .blog-card, .team-member").forEach(el => {
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
