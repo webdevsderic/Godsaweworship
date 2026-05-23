@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="God's Awe Worship Ministries - A Bible-based ministry founded on prayer, worship, and the word of God. Join our community for Sunday worship, prayer services, and spiritual growth.">
+<meta name="description" content="God's Awe Worship Ministries - A Bible-based ministry founded on prayer, worship, and the word of God. Join our community for Sunday worship, prayer services, and [...]
 <meta name="keywords" content="worship, ministry, church, prayer, spiritual growth, faith">
 <meta name="author" content="God's Awe Worship Ministries">
 <meta name="theme-color" content="#062a78">
@@ -30,7 +30,7 @@
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
 <!-- Font Awesome CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR3[...]
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23f8b400'>✦</text></svg>">
@@ -80,6 +80,17 @@ color:white;
 font-weight:bold;
 font-size:20px;
 text-decoration:none;
+}
+
+.logo img{
+height:50px;
+width:auto;
+transition:0.3s;
+}
+
+.logo:hover img,
+.logo:focus img{
+transform:scale(1.05);
 }
 
 nav ul{
@@ -141,6 +152,20 @@ color:white;
 .hero-content{
 animation:fadeUp 1.5s ease;
 max-width:900px;
+}
+
+.hero-logo{
+margin-bottom:30px;
+display:flex;
+justify-content:center;
+}
+
+.hero-logo img{
+height:180px;
+width:auto;
+max-width:100%;
+animation:slideDown 1s ease;
+filter:drop-shadow(0 4px 15px rgba(0,0,0,0.5));
 }
 
 .hero h1{
@@ -628,6 +653,17 @@ transform:translateY(0);
 }
 }
 
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 @media(max-width:900px){
 
 nav ul{
@@ -658,6 +694,10 @@ font-size:clamp(28px, 6vw, 42px);
 font-size:clamp(14px, 3vw, 18px);
 }
 
+.hero-logo img{
+height:120px;
+}
+
 section{
 padding:60px 5%;
 }
@@ -686,6 +726,10 @@ animation:none;
 .whatsapp{
 animation:none;
 }
+
+.hero-logo img{
+animation:none;
+}
 }
 
 </style>
@@ -696,6 +740,7 @@ animation:none;
 <nav role="navigation" aria-label="Main navigation">
 
 <a href="#home" class="logo" aria-label="God's Awe Worship Ministries Home">
+<img src="https://raw.githubusercontent.com/webdevsderic/Godsaweworship/main/assets/logo.png" alt="God's Awe Worship Ministries Logo" loading="lazy">
 <span>GOD'S AWE WORSHIP</span>
 </a>
 
@@ -719,6 +764,10 @@ animation:none;
 <section class="hero" id="home">
 
 <div class="hero-content">
+
+<div class="hero-logo">
+<img src="https://raw.githubusercontent.com/webdevsderic/Godsaweworship/main/assets/logo.png" alt="God's Awe Worship Ministries Logo" loading="lazy">
+</div>
 
 <h1>God's Awe Worship Ministries</h1>
 
@@ -778,11 +827,11 @@ Prayerfulness, integrity, excellence, righteousness, courage and accountability.
 <h2 class="title">Our Background & History</h2>
 
 <p>
-God's Awe Worship Center is a bible-based ministry, laid on the foundation of prayer and the rhema word of God. This ministry is called to share the Gospel of Jesus, disciple nation, raise a generation who shall worship the father in spirit and truth. Gods awe worship center ministries was begun as a prayer fellowship in January 2020 by Rev. Jeremy and Tabitha Menda. By God's grace on September 27, 2020, it was established as a ministry based In Abilene Texas, United states of America. Since its inception, the ministry has continued to attract and minister to large numbers of people, locally and globally, both young and old in all walks of life.
+God's Awe Worship Center is a bible-based ministry, laid on the foundation of prayer and the rhema word of God. This ministry is called to share the Gospel of Jesus, disciple nation, raise a gene[...]
 </p>
 
 <p style="margin-top:20px;">
-The name God's Awe Worship Center Ministries was prayerfully derived from Hebrews 12:28 "Therefore, let us be grateful for receiving a kingdom that cannot be shaken, and thus let us offer bo God acceptable worship, with reverence and Awe for our God is a consuming fire." The name reflects the main ministry and vision of the church.
+The name God's Awe Worship Center Ministries was prayerfully derived from Hebrews 12:28 "Therefore, let us be grateful for receiving a kingdom that cannot be shaken, and thus let us offer bo God [...]
 </p>
 
 </section>
@@ -928,7 +977,7 @@ Connect with us online through our social media platforms.
 <div class="card">
 <i class="fab fa-youtube" aria-hidden="true"></i>
 <h3>YouTube</h3>
-<p><a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" style="color:#062a78; font-weight:bold; text-decoration:none;">Visit YouTube</a></p>
+<p><a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" style="color:#062a78; font-weight:bold; text-decoration:none;">Visit YouTube</a><[...]
 </div>
 
 <div class="card">
@@ -998,149 +1047,3 @@ Community Outreach Program This Month
 <div class="card show">
 
 <h3>Church Contact Information</h3>
-
-<p><strong>Location:</strong> United States of America</p>
-<br>
-<p><strong>Phone:</strong> <a href="tel:+254119588623" style="color:#062a78; text-decoration:none; font-weight:bold;">+254 119 588 623</a></p>
-<br>
-<p><strong>WhatsApp:</strong> <a href="https://wa.me/254119588623" style="color:#062a78; text-decoration:none; font-weight:bold;">+254 119 588 623</a></p>
-<br>
-<p><strong>Email:</strong> <a href="mailto:godsaweworshipcenter@gmail.com" style="color:#062a78; text-decoration:none; font-weight:bold;">godsaweworshipcenter@gmail.com</a></p>
-<br>
-
-<p>
-Welcome where everybody is somebody.
-</p>
-
-<div class="social-links">
-<a href="https://www.facebook.com/jeremy.mwambia.9" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
-<i class="fab fa-facebook-f" aria-hidden="true"></i>
-</a>
-<a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube channel">
-<i class="fab fa-youtube" aria-hidden="true"></i>
-</a>
-<a href="https://wa.me/254119588623" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-<i class="fab fa-whatsapp" aria-hidden="true"></i>
-</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer role="contentinfo">
-
-<div class="footer-content">
-
-<div class="footer-section">
-<h3>Quick Links</h3>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#ministries">Ministries</a></li>
-<li><a href="#blog">Blog</a></li>
-<li><a href="#live">Live Stream</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</div>
-
-<div class="footer-section">
-<h3>Our Campuses</h3>
-<ul>
-<li>God's Awe Kariene, Kenya</li>
-<li>God's Awe Maua, Kenya</li>
-<li>God's Awe Athi, Kenya</li>
-<li>God's Awe Dallas, Texas</li>
-</ul>
-</div>
-
-<div class="footer-section">
-<h3>Contact Us</h3>
-<div class="contact-info">
-<i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+254119588623">+254 119 588 623</a>
-</div>
-<div class="contact-info">
-<i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:godsaweworshipcenter@gmail.com">godsaweworshipcenter@gmail.com</a>
-</div>
-<div class="contact-info">
-<i class="fas fa-map-marker-alt" aria-hidden="true"></i> Abilene, Texas, USA
-</div>
-</div>
-
-<div class="footer-section">
-<h3>Follow Us</h3>
-<div class="social-links">
-<a href="https://www.facebook.com/jeremy.mwambia.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-<i class="fab fa-facebook-f" aria-hidden="true"></i>
-</a>
-<a href="https://youtube.com/@tabithankoroi3682?si=RjhwX7wJyHEqNmA0" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-<i class="fab fa-youtube" aria-hidden="true"></i>
-</a>
-<a href="https://wa.me/254119588623" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-<i class="fab fa-whatsapp" aria-hidden="true"></i>
-</a>
-</div>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-<h3>God's Awe Worship Ministries</h3>
-<p>&copy; 2026 All Rights Reserved. | Bible-Based Ministry Founded on Prayer and God's Word</p>
-</div>
-
-</footer>
-
-<a href="https://wa.me/254119588623" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-<i class="fab fa-whatsapp" aria-hidden="true"></i>
-</a>
-
-<script>
-
-function toggleMenu(){
-const menu = document.getElementById("menu");
-const menuToggle = document.getElementById("menuToggle");
-const isActive = menu.classList.toggle("active");
-menuToggle.setAttribute("aria-expanded", isActive);
-}
-
-// Close menu when a link is clicked
-document.querySelectorAll("#menu a").forEach(link => {
-link.addEventListener("click", () => {
-document.getElementById("menu").classList.remove("active");
-document.getElementById("menuToggle").setAttribute("aria-expanded", false);
-});
-});
-
-const cards = document.querySelectorAll('.card');
-const blogCards = document.querySelectorAll('.blog-card');
-
-// Intersection Observer for better performance
-const observerOptions = {
-threshold: 0.1,
-rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-observer.unobserve(entry.target);
-}
-});
-}, observerOptions);
-
-cards.forEach(card => {
-observer.observe(card);
-});
-
-blogCards.forEach(card => {
-observer.observe(card);
-});
-
-</script>
-
-</body>
-</html>
